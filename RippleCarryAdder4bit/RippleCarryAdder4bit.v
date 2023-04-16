@@ -1,0 +1,14 @@
+module RippleCarryAdder4bit(a, b, c_in, sum, c_out);
+input [3:0] a, b;
+input c_in;
+output [3:0] sum;
+output c_out;
+
+wire w0, w1, w2;
+
+Full_Adder FA0(.a(a[0]), .b(b[0]), .c_in(c_in), .sum(sum[0]), .c_out(w0));
+Full_Adder FA1(.a(a[1]), .b(b[1]), .c_in(w0), .sum(sum[1]), .c_out(w1));
+Full_Adder FA2(.a(a[2]), .b(b[2]), .c_in(w1), .sum(sum[2]), .c_out(w2));
+Full_Adder FA3(.a(a[3]), .b(b[3]), .c_in(w2), .sum(sum[3]), .c_out(c_out));
+
+endmodule

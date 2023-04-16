@@ -1,0 +1,61 @@
+|RippleCarryAdder4bit
+a[0] => a[0]~3.IN1
+a[1] => a[1]~2.IN1
+a[2] => a[2]~1.IN1
+a[3] => a[3]~0.IN1
+b[0] => b[0]~3.IN1
+b[1] => b[1]~2.IN1
+b[2] => b[2]~1.IN1
+b[3] => b[3]~0.IN1
+c_in => c_in~0.IN1
+sum[0] <= Full_Adder:FA0.sum
+sum[1] <= Full_Adder:FA1.sum
+sum[2] <= Full_Adder:FA2.sum
+sum[3] <= Full_Adder:FA3.sum
+c_out <= Full_Adder:FA3.c_out
+
+
+|RippleCarryAdder4bit|Full_Adder:FA0
+a => a1.IN0
+a => x1.IN0
+b => a1.IN1
+b => x1.IN1
+c_in => a2.IN0
+c_in => x2.IN0
+sum <= x2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCarryAdder4bit|Full_Adder:FA1
+a => a1.IN0
+a => x1.IN0
+b => a1.IN1
+b => x1.IN1
+c_in => a2.IN0
+c_in => x2.IN0
+sum <= x2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCarryAdder4bit|Full_Adder:FA2
+a => a1.IN0
+a => x1.IN0
+b => a1.IN1
+b => x1.IN1
+c_in => a2.IN0
+c_in => x2.IN0
+sum <= x2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RippleCarryAdder4bit|Full_Adder:FA3
+a => a1.IN0
+a => x1.IN0
+b => a1.IN1
+b => x1.IN1
+c_in => a2.IN0
+c_in => x2.IN0
+sum <= x2.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= o1.DB_MAX_OUTPUT_PORT_TYPE
+
+
