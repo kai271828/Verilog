@@ -1,0 +1,8 @@
+|Multiplexer2to1
+A => selectA.IN0
+B => selectB.IN1
+select => selectB.IN0
+select => selectA.IN1
+out <= o.DB_MAX_OUTPUT_PORT_TYPE
+
+
